@@ -69,13 +69,13 @@
 				<h3>관리자 페이지</h3><br>
 				<input type="email" name="email" id="1" placeholder="Email"><br>
 				<select name="admin">
-				  <option value="1">관리자</option>
-				  <option value="0">일반 유저</option>
+				  <option value="1">관리자 권한</option>
+				  <option value="0">일반 유저 권한</option>
 				</select>
 				<br>
 				</div>
 				<div class="submit">
-					<input type="submit" value="관리자 권한 부여">
+					<input type="submit" value="권한 변경">
 				</div>
 			</div>
 		</form>
