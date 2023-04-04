@@ -27,7 +27,7 @@
 					<button onclick="location.href='./logout.jsp'">로그아웃</button>
 					<% }else{ %>
 					<button onclick="location.href='./register.jsp'">회원가입</button>
-					<button onclick="location.href='./login.jsp'">로그인</button>
+					<button onclick="location.href='./login.jsp'">접속하기</button>
 					<% } %>
 				</div>
 

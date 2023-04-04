@@ -96,17 +96,21 @@
         <table class="board_detail">
 			<colgroup>
 				<col width="15%"/>
-				<col width="35%"/>
+				<col width="50%"/>
 				<col width="15%"/>
-				<col width="35%"/>
+				<col width="20%"/>
 			</colgroup>
 			<tbody>
 
 				<tr>
+					
 					<th scope="row">제목</th>
-					<td colspan="3">
+					<td>
+
 						<input type="text" name="title" value="<%=b_title%>">
 					</td>
+					<th scope="row">글 번호</th>
+					<td><%=b_id%></td>
 				</tr>
 				<tr>
 					<td colspan="4" class="view_text">
@@ -115,7 +119,7 @@
 				</tr>
 				<tr>
 					<th scope="row">첨부파일</th>
-					<td>
+					<td colspan="3">
 						<a href="./down.jsp?fileName=<%=b_file%>"><%=b_file%></a>
 					</td>
 					

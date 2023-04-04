@@ -23,10 +23,10 @@
 			conn = DBConnection.getConnection();
 			stmt = conn.createStatement();
 			if(search!=null){
-				sql = "select * from jsp_board where board_title like '%"+search+"%'";
+				sql = "select * from jsp_board where board_title like '%"+search+"%' order by 1 desc";
 				
 			}else{
-				sql = "select * from jsp_board";
+				sql = "select * from jsp_board order by 1 desc";
 			}
 			
 			rs = stmt.executeQuery(sql);
@@ -35,12 +35,12 @@
 	<form method="GET" action="./board.jsp">
 		<div style="display: flex; justify-content: center">
 			<input type="text" name="search">
-			<button style="width:100px" type="submit" >검색</button>
+			<button style="width:150px" type="submit" >검색</button>
 		</div>
 	</form>
 	
 	<br>
-	<table class="table table-hover">
+	<table class="table">
 		<colgroup>
 			<col width="10%"/>
 			<col width="55%"/>

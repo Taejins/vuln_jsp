@@ -1936,7 +1936,7 @@ input, select, textarea {
 		}
 		
 		table tbody tr:hover {
-			background-color:#CCCCCC;
+			background-color:#aaaaaa;
 		}
 
 /* Button */
@@ -2305,11 +2305,11 @@ input, select, textarea {
 		/* Main */
 
 			#main > section {
-				padding: 3em 0;
+				padding: 3em;
 			}
 
 			#main section.cover {
-				padding: 5em 0;
+				padding: 5em;
 			}
 
 	}
@@ -2610,11 +2610,11 @@ input, select, textarea {
 		/* Main */
 
 			#main > section {
-				padding: 2em 0;
+				padding: 2em;
 			}
 
 			#main section.cover {
-				padding: 4em 0em;
+				padding: 4em;
 			}
 
 				#main section.cover header {
