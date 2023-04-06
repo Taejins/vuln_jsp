@@ -44,7 +44,7 @@
 			conn = DBConnection.getConnection();
 			String sql = "select A.balance, A.password from jsp_usr U, jsp_asset A where A.email = U.email and A.account = '"+dec_to_account+"'";
 			stmt = conn.createStatement();
-			//비밀번호 검증은 쿼리에서 하지 않고 나눠서 하는 것이 좋음! 하지만 지금은 그냥 쿼리에서 할 꺼지롱
+			
 			rs = stmt.executeQuery(sql);
 			
 			if (rs.next()) {
@@ -120,7 +120,7 @@
 		
 		try{
 			conn = DBConnection.getConnection();
-			String sql = "select U.name, A.balance from jsp_usr U, jsp_asset A where A.email = U.email and A.account = '"+from_account+"'";
+			String sql = "select U.name, A.balance from jsp_usr U, jsp_asset A where A.account = '"+from_account+"' and A.email = U.email";
 			stmt = conn.createStatement();
 			
 			rs = stmt.executeQuery(sql);

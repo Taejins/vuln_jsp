@@ -8,7 +8,7 @@
 
 		<header>
 			<h2>메인 페이지</h2>
-			<img src="assets/img/sad_sponge.png" width="300" >
+			<img src="<%=loc%>/assets/img/sad_sponge.png" width="300" >
 		</header>
 
 	</div>

@@ -57,19 +57,19 @@
 	<br>
 	<table class="table">
 		<colgroup>
-			<col width="20%"/>
-			<col width="20%"/>
-			<col width="20%"/>
-			<col width="20%"/>
-			<col width="20%"/>
+			<col width="28%"/>
+			<col width="18%"/>
+			<col width="18%"/>
+			<col width="18%"/>
+			<col width="18%"/>
 		</colgroup>
 		<thead class="thead=dark">
 			<tr>
+				<th scope="col">일시</th>
 				<th scope="col">보낸계좌</th>
 				<th scope="col">받은계좌</th>
 				<th scope="col">금액</th>
 				<th scope="col">잔액</th>
-				<th scope="col">일시</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -77,11 +77,11 @@
 			<%
 				while(rs.next()){
 					make_table = "<tr>";
+					make_table += "<td>"+rs.getString("trade_date")+"</td>";
 					make_table += "<td>"+rs.getString("to_account")+"</td>";
 					make_table += "<td>"+rs.getString("from_account")+"</td>";
 					make_table += "<td>"+rs.getString("money")+"</td>";
 					make_table += "<td>"+rs.getString("balance")+"</td>";
-					make_table += "<td>"+rs.getString("trade_date")+"</td>";
 					make_table += "</tr>";
 					out.println(make_table);
 				}
