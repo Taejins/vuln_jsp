@@ -62,7 +62,6 @@
 
 <%@ include file="/WEB-INF/jsp/header.jsp"%>
 
-<body>
 <section id="" class="two">
 	<form action="./register.jsp" method="POST">
         <div class="login">

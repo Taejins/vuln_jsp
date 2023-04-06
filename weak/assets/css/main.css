@@ -65,7 +65,7 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-input, select, textarea {
+input:not([type=radio]), select, textarea {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
@@ -1840,7 +1840,11 @@ input, select, textarea {
 		text-align: left;
 		margin-bottom: 0.5em;
 	}
-
+	form input[type="date"]{
+		width:200px;
+	}
+	
+	form input[type="number"],
 	form input[type="text"],
 	form input[type="email"],
 	form input[type="password"],

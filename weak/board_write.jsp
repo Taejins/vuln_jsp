@@ -41,7 +41,7 @@
 			
 			//오늘 날짜 구하기
 			java.util.Date today = new java.util.Date();
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 			String w_date = df.format(today);
 			
 			//서버에 저장된 파일명

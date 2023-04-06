@@ -13,6 +13,12 @@
 		Statement stmt = null;
 		ResultSet rs = null;
 		
+		//정렬 선택
+		String align = request.getParameter("align");
+		
+		if(align==null) align="1";
+		
+		
 		String make_table = null;
 		String sql = "null";
 		
@@ -23,10 +29,10 @@
 			conn = DBConnection.getConnection();
 			stmt = conn.createStatement();
 			if(search!=null){
-				sql = "select * from jsp_board where board_title like '%"+search+"%' order by 1 desc";
+				sql = "select * from jsp_board where board_title like '%"+search+"%' order by "+align+" desc";
 				
 			}else{
-				sql = "select * from jsp_board order by 1 desc";
+				sql = "select * from jsp_board order by "+align+" desc";
 			}
 			
 			rs = stmt.executeQuery(sql);
@@ -34,9 +40,15 @@
 	%>
 	<form method="GET" action="./board.jsp">
 		<div style="display: flex; justify-content: center">
-			<input type="text" name="search">
+			<div style="width:150px; display: flex; justify-content: center">
+				<p><b>정렬 : </p></b>
+				<label><input type="radio" name="align" value="1">ID</label>
+				<label><input type="radio" name="align" value="2">TITLE</label>
+			</div>
+			<input style="margin:0 10px" type="text" name="search">
 			<button style="width:150px" type="submit" >검색</button>
 		</div>
+
 	</form>
 	
 	<br>

@@ -21,6 +21,7 @@
 		String b_content = null;
 		String b_file = null;
 		String b_date = null;
+		boolean b_file_exist = false;
 		String b_writer = null;
 	
 		try{
@@ -35,7 +36,8 @@
 				b_content = rs.getString(3);
 				b_writer = rs.getString(4);
 				b_date = rs.getString(5);
-				b_file = (rs.getString(6)!=null) ? rs.getString(6) : "";
+				b_file = rs.getString(6);
+				if(!b_file.equals("null")) b_file_exist = true;
 			}
 		}catch(Exception e){
 			System.out.println("DB 쿼리 실패");
@@ -65,7 +67,10 @@
 					</tr>
 					<tr>
 						<th scope="row">첨부파일</th>
-						<td><a href="./down.jsp?fileName=<%=b_file%>"><%=b_file%></a></td>
+						<td>
+						<%if(b_file_exist){%>
+						<a href="./down.jsp?fileName=<%=b_file%>"><%=b_file%></a></td>
+						<%}%>
 						<th scope="row">작성일</th>
 						<td><%=b_date%></td>
 						</tr>
