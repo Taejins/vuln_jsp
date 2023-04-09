@@ -8,7 +8,7 @@
 <% if(s_name==null){%>
 	<script>
 		alert("로그인 후 이용해 주세요");
-		location.href = "<%=loc%>/login.jsp";
+		location.href = "<%=loc%>/sign/login.jsp";
 	</script>
 <% }else if(page_session.getAttribute("my_account")==null){%>
 	<script>
